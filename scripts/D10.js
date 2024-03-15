@@ -604,4 +604,25 @@ tree(10)
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
-const isItPrime = (number = 0) => {}
+// un numero primo è un numero intero maggiore di 1 divisibile solamente per se stesso e 1.
+// Inoltre i numeri interi maggiori della radice quadrata del numero stesso non è necessario controllarli.
+// Per un teorema matematico.
+
+const isItPrime = (number) => {
+  // quindi se il numero inserito è minore o uguale di uno è da escludere quindi restituiamo false
+  if (number <= 1) return false
+
+  // poi controlliamo se i numeri inferiori o uguali alla radice quadrata di "number" danno come
+  // resto un risultato uguale a 0. Se è così significa che sono divisibili anche per un numero
+  // diverso da loro stessi e 1, quindi non sono numeri primi, quindi restituiamo false.
+  // Al contrario se nessuno di questi numeri ci da come resto esattamente zero è da considerarsi un numero primo,
+  // quindi dovremmo restituire true.
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false
+    }
+  }
+  return true
+}
+
+console.log("è un numero primo:", isItPrime(2))
