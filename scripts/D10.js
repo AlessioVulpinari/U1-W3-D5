@@ -226,7 +226,7 @@ const howManyDays = (data) => {
   // in milliseconds
   let timeDiff = new Date().getTime() - data.getTime()
 
-  // in days
+  // in days arrotondato
   let dayDiff = Math.round(timeDiff / (1000 * 3600 * 24))
 
   return dayDiff
@@ -561,6 +561,8 @@ addClass()
   ***
 
 */
+
+const halfTree = (number) => {}
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
