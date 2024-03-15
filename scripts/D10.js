@@ -562,7 +562,18 @@ addClass()
 
 */
 
-const halfTree = (number) => {}
+const halfTree = (number) => {
+  const asterisk = "*"
+  const container = document.getElementById("container")
+  for (let i = 1; i <= number; i++) {
+    const line = document.createElement("div")
+    const lineText = asterisk.repeat(i)
+    line.innerText = lineText
+    container.appendChild(line)
+  }
+}
+
+halfTree(3)
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -575,9 +586,22 @@ const halfTree = (number) => {}
   *****
 
 */
+const tree = (number) => {
+  const asterisk = "*"
+  const container = document.getElementById("container")
+  for (let i = 0; i < number; i++) {
+    const line = document.createElement("div")
+    const lineText = asterisk.repeat(1 + 2 * i)
+    line.innerText = lineText
+    line.style.textAlign = "center"
+    container.appendChild(line)
+  }
+}
+
+tree(10)
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
+const isItPrime = (number = 0) => {}
