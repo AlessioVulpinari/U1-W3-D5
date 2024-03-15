@@ -562,6 +562,15 @@ addClass()
 
 */
 
+// Dobbiamo creare un albero formato da asterischi, alto in base al numero inserito dall'utente.
+// La base dell'albero è sempre formata da un numero di asterischi pari al numero inserito
+// dall'utente. Man mano che saliamo verso la cima ogni riga del nostro albero sarà formata
+// ognivolta da un numero decrescente di asterischi. Ho deciso di partire la creazione
+// dell'albero a partire dalla cima. Quindi scendendo ogni riga deva avere n asterischi
+// dove n è il numero della riga. Basta perciò creare un div e mettere nel suo testo
+// un numero di asterischi uguale ad n. Per fare questo useremo la funzione repeat,
+// che se applicata ad una stringa la ripeterà in base all'attributo numerico fornito.
+
 const halfTree = (number) => {
   const asterisk = "*"
   const container = document.getElementById("container")
@@ -586,6 +595,10 @@ halfTree(3)
   *****
 
 */
+// molto simile all'esercizio di prima. Tuttavia questa volta gli asterischi aumenteranno di
+// due ad ogni riga quindi (numero riga * 2) partendo però da uno, quindi per ottenere
+// il numero di asterischi da inserire in ogni riga ci bastera fare 1 + i * 2.
+
 const tree = (number) => {
   const asterisk = "*"
   const container = document.getElementById("container")
