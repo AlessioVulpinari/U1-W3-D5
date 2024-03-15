@@ -222,9 +222,19 @@ const rollTheDices = (number) => {
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
-// 21/02/2024
+const howManyDays = (data) => {
+  // in milliseconds
+  let timeDiff = new Date().getTime() - data.getTime()
 
-const howManyDays = (data) => {}
+  // in days
+  let dayDiff = Math.round(timeDiff / (1000 * 3600 * 24))
+
+  return dayDiff
+}
+
+const randomDay = new Date("03/1/2024")
+
+console.log(howManyDays(randomDay))
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
